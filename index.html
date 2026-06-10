@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css" media="all">
+  <title>Controle de Estoque | Marcenaria</title>
+</head>
+<body>
+  <header class="header">
+    <div class="conteudo-cabecalho" id="div-cabecalho">
+      <h1><i class="fas fa-tools"></i> Controle de <span class="str-header">Ferramentas</span></h1>
+    </div>
+    <div class="info">
+      <div class="card-info">
+      <span>Total de itens no estoque:</span>
+      <h3></h3>
+      </div>
+      <div class="busca">
+        <i class="fas fa-search"></i>
+        <div class="busca-input">
+          <label for="busca">Buscar por nome</label>
+          <input type="text" class="form-input" id="busca" placeholder="busca">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="formulario" id="form-section">
+      <form id="form-ferramenta">
+        <div class="form-grupo">
+          <div class="div-input">
+            <label for="nome">Ferramenta</label>
+            <input type="text" placeholder="Ex: Serra Tico-Tico, Formão" class="form-input" id="nome" required>
+          </div>
+          <br>
+          <div class="div-input">
+            <label for="marca">Fabricante / Marca</label>
+            <input type="text" placeholder="Ex: Bosch, Makita" class="form-input" id="marca" required>
+          </div>
+          <br>
+          <div class="div-input">
+            <label for="codigo">Cód. Série / Patrimônio</label>
+            <input type="text" placeholder="Ex: SN-12345-X" class="form-input" id="codigo" required>
+          </div>
+          <input type="submit" value="Adicionar ao Estoque">
+        </div>
+      </form>
+    </section>
+    
+    <section class="lista">
+      <table class="table-estoque">
+        <thead class="thead">
+          <tr>
+            <th>Ferramenta</th>
+            <th>Fabricante</th>
+            <th>Cód. Série / N°</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody class="tbody" id="tabela-estoque"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
